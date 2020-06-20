@@ -4,7 +4,8 @@ Path: c:\python_playground\basics
 Created Date: Saturday, June 20th 2020, 6:32:14 pm
 Author: Ênio Viana
 
-Copyright (c) 2020 Your Company
+Copyright (c) 2020 eniocc
+Based on Socratica videos
 '''
 # Types: int, float, complex
 

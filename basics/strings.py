@@ -4,7 +4,8 @@ Path: c:\python_playground\basics
 Created Date: Saturday, June 20th 2020, 6:09:04 pm
 Author: Ênio Viana
 
-Copyright (c) 2020 Your Company
+Copyright (c) 2020 eniocc
+Based on Socratica videos
 '''
 # A simple message with double quotes
 message = "Hello world!"
