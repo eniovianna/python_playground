@@ -1,2 +1,2 @@
 # python_playground
-Playgroun Python Languague
+Playground Python Languague
