@@ -1,0 +1,7 @@
+Pacific
+Atlantic
+Indian
+Southern
+Artic
+=======================
+There are 5 oceans.

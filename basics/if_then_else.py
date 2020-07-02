@@ -1,12 +1,22 @@
-"""
-Filename: c:\python_playground\basics\if_then_else.py
-Path: c:\python_playground\basics
-Created Date: Saturday, June 20th 2020, 7:24:15 pm
-Author: Ênio Viana
-
+# -*- coding: utf-8 -*-
+""""""
+'''
+File: if_then_else.py
+Project: basics
+Created Date: Saturday-June 20-06-2020 19:24:15
+Author: Ênio Rodrigues Viana
+Based on Youtube channel Socratica
+-----
+Last Modified: Saturday-June 20-06-2020 19:24:15
+Modified By: the developer formerly known as Ênio Rodrigues Viana at <eniocc@gmail.com>
+-----
 Copyright (c) 2020 eniocc
-Based on Socratica videos
-"""
+-----
+HISTORY:
+Date      	By	Comments
+----------	---	---------------------------------------------------------
+'''
+""""""
 # Collect string / test length
 string = input("Please enter a string: ")
 
@@ -31,7 +41,7 @@ c = int(input("The length of side c = "))
 
 
 if (a != b) and (b != c) and (a != c):
-    print("This is a scalene triangle.")
+    print("This is a scalene triangle.") 
 elif (a == b) and (b == c):
     print("This is an equilateral triangle.")
 else:
