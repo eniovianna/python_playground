@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """"""
 '''
-File: lists_.py
+File: tuples_.py
 Project: basics
 Created Date: Thursday-July 2-07-2020 23:59:49
 Author: Ênio Rodrigues Viana
@@ -10,7 +10,7 @@ Last Modified: Thursday-July 2-07-2020 23:59:49
 Modified By: the developer formerly known as Ênio Rodrigues Viana at <eniocc@gmail.com>
 -----
 Copyright (c) 2020 eniocc
-Based on Socratica Youtube channel
+Based on Socratica Youtube channel and https://www.programiz.com/python-programming/tuple
 -----
 HISTORY:
 Date      	By	Comments
@@ -39,7 +39,7 @@ TEST_SIZE = 100
 list_int = []
 tuple_int = [random.randint(0, 1) for i in range(TEST_SIZE)]
 # After this point the tuple can not be modify becayse it is immutable.
-# The lists are mutable
+# Lists are mutable
 
 # Create a random list.
 for i in range(TEST_SIZE):
@@ -104,13 +104,29 @@ print(type(test3))
 # Let's see tuple assignment and it access
 # (age, country, knows_python), it is our tuple model
 survey = (27, "Vietnam", True)
-# Access
+
+# Accessing elements in a tuple
 age = survey[0]
 country = survey[1]
 knows_python = survey[2]
 print("Age = ", age)
 print("Country = ", country)
 print("Knows Python = ", knows_python)
+
+# Let's see how to access a nested tuple
+my_tuple = ("Chemistry", "Biology", "Math", (True, False))
+print(my_tuple[0])  # Chemistry
+print(my_tuple[0][-1])  # y
+print(my_tuple[3][0])  # True
+
+# Let's try slicing a tuple
+my_tuple = ('m', 'y', 'n', 'a', 'm', 'e', 'i', 's')
+print(my_tuple[0:4])  # The last is not inclusive
+print(my_tuple[:])  # Begin to end
+print(my_tuple[:5])  # Begin to 5-1
+print(my_tuple[:-2])  # Begin to end-2
+print(my_tuple[3:])  # 3 to end
+
 
 # Other simple way to access value in a tuple
 survey2 = (21, "Switzerland", False)
@@ -131,3 +147,47 @@ print(country)  # We are printing a tuple
 
 # Similar occurs below when the number of variables is greater than elements in tuple
 # x, y, z = (1, 2)
+
+# There is a exceptional case when we can change a tuple
+my_tuple = (5, 4, 3, 2, [0, 1])
+print(my_tuple)
+my_tuple[4][1] = 0
+print(my_tuple)
+# Tuples can be reassigned
+my_tuple = (0,1,2)
+print(my_tuple)
+
+# Deleting tuples
+my_tuple = ('p', 'r', 'o', 'g', 'r', 'a', 'm', 'i', 'z')
+# del my_tuple[3] can't delete items
+del my_tuple # Can delete an entire tuple
+# print(my_tuple) # NameError: name 'my_tuple' is not defined
+
+# Tuple methods. Tuple have only two methods.
+my_tuple = ('a', 'p', 'p', 'l', 'e',)
+print(my_tuple.count('p'))  # Output: 2
+print(my_tuple.index('l'))  # Output: 3
+
+# Tuple operations - Membership test in tuple
+my_tuple = ('a', 'p', 'p', 'l', 'e',)
+# In operation
+print('a' in my_tuple)
+print('b' in my_tuple)
+# Not in operation
+print('g' not in my_tuple)
+
+# Iterating Through a Tuple
+# Using a for loop to iterate through a tuple
+for name in ('John', 'Kate'):
+    print("Hello", name)
+
+"""
+Advantages of Tuple over List
+Since tuples are quite similar to lists, both of them are used in similar situations. However, there are certain advantages of implementing 
+a tuple over a list. Below listed are some of the main advantages:
+
+* We generally use tuples for heterogeneous (different) data types and lists for homogeneous (similar) data types.
+* Since tuples are immutable, iterating through a tuple is faster than with list. So there is a slight performance boost.
+* Tuples that contain immutable elements can be used as a key for a dictionary. With lists, this is not possible.
+* If you have data that doesn't change, implementing it as tuple will guarantee that it remains write-protected.
+"""
