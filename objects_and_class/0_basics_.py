@@ -30,10 +30,10 @@ class Parrot:
 
     # instance method
     def sing(self, song):
-        return "{} sings {}".format(self.name, song)
+        return f"{self.name} sings {song}"
 
     def dance(self):
-        return "{} is now dancing".format(self.name)
+        return f"{self.name} is now dancing"
 
 
 def main():
@@ -42,12 +42,12 @@ def main():
     woo = Parrot("Woo", 15)
 
     # access the class attributes
-    print("Blu is a {}".format(blu.__class__.species))
-    print("Woo is also a {}".format(woo.__class__.species))
+    print(f"Blu is a {blu.__class__.species}")
+    print(f"Woo is also a {woo.__class__.species}")
 
     # access the instance attributes
-    print("{} is {} years old".format(blu.name, blu.age))
-    print("{} is {} years old".format(woo.name, woo.age))
+    print(f"{blu.name} is {blu.age} years old")
+    print(f"{woo.name} is {woo.age} years old")
 
     # call our instance methods
     print(blu.sing("'Happy'"))

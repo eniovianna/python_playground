@@ -31,15 +31,12 @@ def fibonacci(n):
         raise TypeError("n must be a positive int")
     if n < 0:
         raise ValueError("n must be a positive int or zero")
-    
+
     # Compute the n-th term
     if n == 0:
         # Position 0
         return 0
-    if n == 1:
-        return 1
-    else:
-        return fibonacci(n - 1) + fibonacci(n - 2)
+    return 1 if n == 1 else fibonacci(n - 1) + fibonacci(n - 2)
 
 
 # Uncomment the lines below to test example
@@ -101,23 +98,18 @@ print("Evaluated time: {0}".format(time_end - time_start))
 """
 
 @lru_cache(maxsize = 1000)
-# Now we will use the lru_cache from functools module. LRU means Least Recently Used Cache
-# Look the following link for higher values of maxsize, https://stackoverflow.com/questions/5061582/setting-stacksize-in-a-python-script/16248113#16248113
 def fibonacci_lru(n):
     # Check that the input is a positive integer
     if (type(n) != int):
         raise TypeError("n must be a positive int")
     if n < 0:
         raise ValueError("n must be a positive int or zero")
-    
+
     # Compute the n-th term
     if n == 0:
         # Position 0
         return 0
-    if n == 1:
-        return 1
-    else:
-        return fibonacci_lru(n - 1) + fibonacci_lru(n - 2)
+    return 1 if n == 1 else fibonacci_lru(n - 1) + fibonacci_lru(n - 2)
 
 # Uncomment the lines below to test example
 """

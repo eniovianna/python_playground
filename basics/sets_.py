@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """"""
+
 '''
 File: sets_.py
 Project: basics
@@ -49,7 +50,7 @@ print(example)
 example.discard(42)
 print(example)
 # We can start a set starts from a list
-example2 = set([1, True, 'Europe', 2.71828])
+example2 = {1, True, 'Europe', 2.71828}
 print(len(example2))
 
 # Let's clear our set
@@ -58,11 +59,11 @@ print(example)
 
 # If we have 2 sets, the combination of all elements from the two sets is denoted with Union
 # The intersection is the set of elements inside both A and B sets
-odds = set([1, 3, 5, 7, 9])
-evens = set([2, 4, 6, 8, 10])
-primes = set([2, 3, 5, 7])
+odds = {1, 3, 5, 7, 9}
+evens = {2, 4, 6, 8, 10}
+primes = {2, 3, 5, 7}
 # composite integers - the integers which can be factored
-composites = set([4, 6, 8, 9, 10])
+composites = {4, 6, 8, 9, 10}
 
 print(odds.union(evens))
 print(evens.union(odds))
