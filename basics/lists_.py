@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """"""
+
 '''
 File: lists_.py
 Project: basics
@@ -19,7 +20,7 @@ Date      	By	Comments
 '''
 """"""
 # A simple list definition
-example = list()
+example = []
 print(example)
 print(type(example))
 # Another simple definition
@@ -67,9 +68,7 @@ print(help(letters))
 letters.sort()
 print(letters)
 
-# To add more items
-primes.append(17)
-primes.append(19)
+primes.extend((17, 19))
 print(primes)
 
 # To remove items

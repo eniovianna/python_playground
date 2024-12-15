@@ -8,6 +8,7 @@ Copyright (c) 2020 eniocc
 Based on Socratica videos
 '''
 
+
 # Operations: + - * /
 
 x = 28
@@ -19,7 +20,7 @@ print(int(pi))
 
 Z = 2.00
 print(type(Z))
-Z = Z + 0.32j
+Z += 0.32j
 print(type(Z))
 
 # The error below occurs because floats are narrower than complex numbers

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """"""
+
 '''
 File: tuples_.py
 Project: basics
@@ -35,17 +36,8 @@ for t in tuple_example:
 TEST_SIZE = 100
 
 
-# Create a random tuple
-list_int = []
-tuple_int = [random.randint(0, 1) for i in range(TEST_SIZE)]
-# After this point the tuple can not be modify becayse it is immutable.
-# Lists are mutable
-
-# Create a random list.
-for i in range(TEST_SIZE):
-    list_int.append(random.randint(0, 1))
-    # After this point we can modify the list. Lists are mutable.
-
+tuple_int = [random.randint(0, 1) for _ in range(TEST_SIZE)]
+list_int = [random.randint(0, 1) for _ in range(TEST_SIZE)]
 print("LIST\t\tTUPLE")
 for i in range(TEST_SIZE):
     # We can iterate lists and tuples with a simple for
@@ -121,7 +113,7 @@ print(my_tuple[3][0])  # True
 
 # Let's try slicing a tuple
 my_tuple = ('m', 'y', 'n', 'a', 'm', 'e', 'i', 's')
-print(my_tuple[0:4])  # The last is not inclusive
+print(my_tuple[:4])
 print(my_tuple[:])  # Begin to end
 print(my_tuple[:5])  # Begin to 5-1
 print(my_tuple[:-2])  # Begin to end-2

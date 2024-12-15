@@ -43,8 +43,7 @@ def read_file_timed(path):
     start_time = time.time()
     try:
         f = open(path, mode="rb")
-        data = f.read()
-        return data
+        return f.read()
     except FileNotFoundError as err:
         logger.error(err)
         raise

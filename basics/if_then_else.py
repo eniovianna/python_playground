@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """"""
+
 '''
 File: if_then_else.py
 Project: basics
@@ -41,8 +42,8 @@ c = int(input("The length of side c = "))
 
 
 if (a != b) and (b != c) and (a != c):
-    print("This is a scalene triangle.") 
-elif (a == b) and (b == c):
+    print("This is a scalene triangle.")
+elif a == b == c:
     print("This is an equilateral triangle.")
 else:
     print("This is an isosceles triangle.")

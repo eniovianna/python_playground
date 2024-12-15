@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """"""
+
 '''
 File: text_files.py
 Project: basics
@@ -17,16 +18,8 @@ Date      	By	Comments
 ----------	---	---------------------------------------------------------
 '''
 """"""
-# There are two types of files:
-# 1 - Text files: plain text, xml, json, souce code, etc.
-# 2 - Binary files: compiled code, app data, media files(audio, video)
-# print(help(open))
-
-# The simple way to open a file. It's a dangerous way.
-f = open("guido_bio.txt")
-text = f.read()
-f.close()
-
+with open("guido_bio.txt") as f:
+    text = f.read()
 # The code below is more security than above. When we uses open method
 # we don't need to close the file.
 with open("guido_bio.txt") as fobj:

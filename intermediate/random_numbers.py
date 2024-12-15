@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """"""
+
 '''
 File: random_numbers.py
 Project: intermediate
@@ -27,7 +28,7 @@ print(dir(random))
 print(help(random.random))
 
 # Display 10 random numbers between 0 and 1
-for i in range(10):
+for _ in range(10):
     print(random.random())
 
 # Generate random numbers from interval 3-7. Way #0
@@ -39,26 +40,26 @@ def my_random():
 
 
 # Print 10 random numbers from call function my_random()
-for i in range(10):
+for _ in range(10):
     print(my_random())
 
 
 # Generate random numbers from interval 3-7. Way #1 (uniform function)
 print(help(random.uniform))
-for i in range(10):
+for _ in range(10):
     print(random.uniform(3, 7))
-    
+
 # Generate random numbers from a Gaussian Distribution
 print(help(random.normalvariate))
-for i in range(10):
+for _ in range(10):
     print(random.normalvariate(0, 10))
 
 # Generante random int numbers
 print(help(random.randint))
-for i in range(10):
+for _ in range(10):
     print(random.randint(0, 9))
 
 # Generate from a random from a list
 outcomes = ['rock', 'paper', 'scissor']
-for i in range(10):
+for _ in range(10):
     print(random.choice(outcomes))
